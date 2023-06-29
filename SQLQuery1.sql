@@ -1,0 +1,26 @@
+CREATE DATABASE Drobilka
+GO 
+USE Drobilka
+
+CREATE TABLE Schet
+(
+Id INT IDENTITY PRIMARY KEY,
+[Date] Date,
+[Time] INT,
+[Summa] MONEY,
+CompanyId INT FOREIGN KEY REFERENCES Company(Id)
+)
+
+CREATE TABLE Company
+(
+Id INT IDENTITY PRIMARY KEY,
+[Name] CHAR(30),
+)
+
+SELECT * FROM Schet
+
+
+
+
+
+
